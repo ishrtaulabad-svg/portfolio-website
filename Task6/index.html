@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task Scheduler</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Task Scheduler</h1>
+
+  <form class="container" id="form">
+    <div class="InputType">
+      <input type="text" id="taskInput" placeholder="Enter Task" required>
+      <select id="priority">
+        <option value="Top Priority">Top Priority</option>
+        <option value="Task 1">Task 1</option>
+        <option value="Task 2">Task 2</option>
+      </select>
+      <input type="date" id="date" required>
+      <button class="button" type="submit">Add Task</button>
+    </div>
+  </form>
+
+  <div id="taskList">
+    <ul id="taskList2"></ul>
+  </div>
+
+  <script src="../Task6/scrit.js"></script>
+</body>
+</html>
+

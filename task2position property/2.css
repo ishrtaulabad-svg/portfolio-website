@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+
+}
+
+.container {
+    height: 500px;
+    width: 600px;
+    border: 2px solid black;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box1 {
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+    display: flex;
+}
+
+.Dafalt {
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    background: rgb(137, 236, 193);
+    position: static;
+}
+
+.box2 {
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+    margin-left: 20px;
+}
+
+.MovedAcros {
+    height: 80px;
+    width: 80px;
+    border: 2px solid black;
+    background: rgb(137, 236, 193);
+    position: relative;
+    left: 90px;
+    align-items: center;
+    justify-content: center;
+}
+
+.MovedDown {
+    height: 80px;
+    width: 80px;
+    border: 2px solid black;
+    background: rgb(137, 236, 193);
+    position: relative;
+    right: 85px;
+    top: 116px;
+    align-items: center;
+    justify-content: center;
+}
+
+.box3 {
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+    margin-left: 20px;
+}
+
+.CenterHorizantel {
+    height: 80px;
+    width: 80px;
+    border: 2px solid black;
+    background: rgb(137, 236, 193);
+    position: relative;
+    margin: 0 auto;
+    align-items: center;
+    white-space: normal;
+
+}
+.box4 {
+    position: absolute;
+    top: 300px;
+    left: 67px;
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+    margin-left: 20px;
+}
+.Side-by-side{
+    height: 40px;
+    width: 40px;
+    border: 2px solid black;
+    background: rgb(137, 236, 193);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+.Side-by-side1{
+    height: 40px;
+    width: 40px;
+    border: 2px solid black;
+    background: rgb(137, 236, 193);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 40px;
+    left: 100px;
+}
+
+.box5 {
+    position: absolute;
+    top: 300px;
+    left: 67px;
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+    margin-left: 20px;
+}
+.Overlapping{
+height: 40px;
+    width: 40px;
+    border: 2px solid black;
+    background: rgb(137, 236, 193);
+    display: flex;
+    margin: 90px;
+    position: absolute;
+    top: 10px;
+    left: 30px;
+}

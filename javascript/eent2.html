@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Events Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    #colorBox {
+      width: 150px;
+      height: 150px;
+      background: lightblue;
+      margin: 15px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    img {
+      width: 120px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      margin: 10px 0;
+    }
+    img:hover {
+      border: 2px solid gray;
+    }
+     label { display: block; margin: 8px 0 4px; }
+    input { padding: 5px; width: 200px; margin-bottom: 10px; }
+    button { padding: 5px 10px; }
+  </style>
+</head>
+<body>
+
+  <h2>JavaScript Events Example</h2>
+
+<!-- <button id="clickbtn">clickme</button>
+
+<button id="mode">Mode</button> -->
+
+<button id="Numbers">0</button>
+<button id="IncreaseBtn">Increase</button>
+<button id="DecreaseBtn">Decrease</button>
+password:<input type="text" id="passowrd" placeholder="Password">
+<button id="CheckBx">CheckBx</button>
+
+
+    <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="Enter your email">
+
+    <button type="submit" id="submit">Submit</button>
+  </form>
+ <!-- event object
+  handel about the event
+  (e)properties and methods -->
+<!-- mouse event -->
+ <div id="colorBox">Hover me</div>
+ 
+ 
+
+<script>
+
+// Create a button "Increase" and a button "Decrease". Show a number on the screen that goes up and down when clicked.
+
+let count = 0;
+let display = document.querySelector("#Numbers")
+let Increase = document.querySelector("#IncreaseBtn")
+let Decrease =document.querySelector("#DecreaseBtn")
+
+increaseBtn = addEventListener("click",()=>{
+count++;
+display.textContent = count;
+});
+decreaseBtn.addEventListener("click", () => {
+      if (count > 0) {
+        count--;
+        display.textContent = count;
+      } else {
+        alert("Number cannot go below 0!");
+      }
+    });
+
+    // Create a password input and a checkbox "Show Password". When the checkbox is clicked, 
+    // toggle between hidden/visible text.
+let element = document.querySelector("#password");
+let CheckBx = document.querySelector("#CheckBx")
+
+password.addEventListener('click',()=>{
+if(password.type === "password"){
+password.type = "text";
+}else{
+password.type = "password";
+}
+});
+
+
+// Make a simple form with name and email. When you click Submit, show an alert if the fields are empty.
+
+document.querySelector("#name")
+document.querySelector("#email")
+const submit = document.querySelector("#submit")
+form.addEventListener("submit",(event){
+    event.preventDefault();
+})
+if(nameInput.value != text && Emailinput.value.include("@") ){
+     alert("Correct input")
+}else{
+
+    alert(submit)
+};
+
+
+
+
+
+    // dark tolight mode
+//    let modebtn = document.querySelector("#mode");
+//    let currMode = "light";
+//    modebtn.addEventListener("click",()=>{
+    
+//     if(currMode  === "light"){
+//         currMode = "dark";
+//         document.querySelector("body").style.background = "black";
+//     }else{
+//         currMode = "light";
+//         document.querySelector("body").style.background = "white";
+//     }
+// console.log(currMode)
+//    });
+   
+
+    // document.getElementById('clickbtn').addEventListener("click",()=>{
+    //     alert("clicked button")
+    // });
+    let btn =document.querySelector("#clickbtn");
+
+    // btn.onclick = (evt)=>{
+    //     console.log(evt);
+    //     console.log(evt.type);
+    //     console.log(evt.target);
+    //     console.log(evt.clientX,evt.clientY)
+    // }
+    
+const box = document.getElementById("colorBox");
+box.addEventListener("mousemove",()=>{
+box.style.background = "green";
+  box.textContent = "Mouse Over";
+});
+box.addEventListener("mouseleave",(evt)=>{
+    box.style.background = "yellow";
+    box.textContent = "mouseleave"
+    console.log(evt);
+        console.log(evt.type);
+        console.log(evt.target);
+        console.log(evt.clientX,evt.clientY)
+})
+
+
+ <!-- event listeners -->
+//    node.addEventListener(event,callback)
+// node.removeEventLister(event,callback)
+
+btn.addEventListener("click",(evt)=>{
+    // event handler
+    // console.log("button1 was clicked-handler1")
+    // console.log(evt.type)
+    // console.log(evt.target);
+})
+btn.addEventListener("click",()=>{
+    // event handler
+    console.log("button1 was clicked-handler2")
+})
+
+btn.addEventListener("click",()=>{
+    // event handler
+    console.log("button2 was clicked-handler2")
+})
+//when remove then store invariable
+const handler3= ("click",()=>{
+    // event handler
+    console.log("button3 was clicked-handler3")
+})
+
+btn.addEventListener("click",()=>{
+    // event handler
+    console.log("button4 was clicked-handler4")
+})
+
+ btn.removeEventListener("click",handler3)
+
+
+
+
+  </script>
+
+</body>
+</html>

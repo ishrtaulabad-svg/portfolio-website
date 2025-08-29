@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <button class="button" id="button">add task</button>
+    <script>
+        document.getElementById('button').addEventListener('click',function(){
+    alert("clicked me");
+})
+
+// event object
+const e = "aaa"
+document.getElementByClassName('button').addEventListener('click',function(e){
+    alert("double clicked")
+})
+console.log(e)
+
+const x= event.type()
+// timeStamp Event
+event.timeStamp
+
+// defaultPrevented 
+
+// target,to element,src element,currentTarget,claintposition, altkey,keycode
+
+
+// Event propegation
+    </script>
+</body>
+</html>

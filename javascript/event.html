@@ -1,0 +1,194 @@
+<!-- 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Events Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    #colorBox {
+      width: 150px;
+      height: 150px;
+      background: lightblue;
+      margin: 15px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    img {
+      width: 120px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      margin: 10px 0;
+    }
+    img:hover {
+      border: 2px solid gray;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>JavaScript Events Example</h2>
+
+   Click Event -->
+  <!-- <button id="clickBtn">Click Me</button>
+
+   Mouse Events -->
+  <!-- <div id="colorBox">Hover me</div> -->
+
+  <!-- Keyboard Event -->
+  <!-- <input type="text" id="nameInput" placeholder="Type your name"> -->
+
+  <!-- Checkbox Event -->
+  <!-- <p>
+    <label><input type="checkbox" id="agreeCheck"> I agree to terms</label>
+  </p> -->
+
+  <!-- Dropdown (Change Event) -->
+  <!-- <p>
+    <label for="colors">Pick a color: </label>
+    <select id="colors">
+      <option value="">--Choose--</option>
+      <option value="red">Red</option>
+      <option value="green">Green</option>
+      <option value="blue">Blue</option>
+    </select>
+  </p> -->
+
+  <!-- Image (Click Event) -->
+  <!-- <p>
+    <img id="myImage" src="https://via.placeholder.com/120" alt="Sample">
+  </p> -->
+
+  <!-- Form -->
+  <!-- <form id="myForm">
+    <input type="email" placeholder="Enter email" required>
+    <button type="submit">Submit Form</button>
+  </form> -->
+
+  <script>
+    // Button Click Event
+    // document.getElementById("clickBtn").addEventListener("onclick", () => {
+    //   alert("Button clicked!");
+    // });
+
+    // Mouse Events on Div
+    // const box = document.getElementById("colorBox");
+    // box.addEventListener("mouseover", () => {
+    //   box.style.background = "lightgreen";
+    //   box.textContent = "Mouse Over";
+    // });
+    // box.addEventListener("mouseout", () => {
+    //   box.style.background = "lightblue";
+    //   box.textContent = "Hover me";
+    // });
+
+    // Keyboard Event
+    // document.getElementById("nameInput").addEventListener("keydown", (event) => {
+    //   console.log("Key pressed:", event.key);
+    // });
+
+    // Checkbox Change Event
+    // document.getElementById("agreeCheck").addEventListener("change", (event) => {
+    //   alert(event.target.checked ? "You agreed ✅" : "You unchecked ❌");
+    // });
+
+    // Dropdown Change Event
+    // document.getElementById("colors").addEventListener("change", (event) => {
+    //   document.body.style.backgroundColor = event.target.value || "white";
+    // });
+
+    // Image Click Event
+    // document.getElementById("myImage").addEventListener("click", () => {
+    //   alert("You clicked the image!");
+    // });
+
+    // Form Submit Event
+    // document.getElementById("myForm").addEventListener("submit", (event) => {
+    //   event.preventDefault();
+    //   alert("Form submitted successfully!");
+    // });
+
+    // Window Resize Event
+    // window.addEventListener("resize", () => {
+    //   console.log("Window resized: " + window.innerWidth + "x" + window.innerHeight);
+    // });
+//   </script>  
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Playground</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }
+    #box {
+      width: 300px; height: 150px;
+      background: lightblue;
+      margin: 20px auto;
+      line-height: 150px;
+      border: 2px solid black;
+    }
+    #parent { padding:20px; background: lightcoral; margin:20px; }
+    #log { margin-top: 20px; border:1px solid gray; padding:10px; min-height:80px; }
+  </style>
+</head>
+<body>
+  <h2>🎯 Event Playground</h2>
+
+  <!-- 1. Toggle background -->
+  <button id="modeBtn">Toggle Dark/Light</button>
+
+  <!-- 2. Keyboard input -->
+  <br><br>
+  <input id="keyInput" type="text" placeholder="Type something">
+  <p id="keyOutput"></p>
+
+  <!-- 3. Form -->
+  <form id="myForm">
+    <input type="text" id="formInput" placeholder="Enter text">
+    <button type="submit">Submit</button>
+  </form>
+  <p id="formOutput"></p>
+
+  <!-- 4. Mouse tracker -->
+  <div id="box">Move mouse here</div>
+  <p id="coords"></p>
+
+  <!-- 5. Image preview -->
+  <input type="file" id="fileInput" accept="image/*">
+  <br><br>
+  <img id="preview" width="200">
+
+  <!-- 6. Stop propagation -->
+  <div id="parent">
+    Parent Div
+    <button id="child">Click Child</button>
+  </div>
+
+  <div id="log">Event details will appear here...</div>
+
+  <script>
+    // Clicking the toggle button changes page background.
+   let background = document.querySelector("#modeBtn")
+  modeBtn.addEventListener('click',()=>{
+document.body.style.backgroundColor = "red";
+    });
+
+// A text input → show the last key pressed (event.key, event.code, and ctrlKey/shiftKey).
+    let Input= document.querySelector("#keyInput");
+    Input.addEventListener("keyDown",function(event){
+document.getElementById("keyInput").textContent = 
+"key:" + event.key +" | Code: " + event.code;
+
+    });
+  </script>
+</body>
+</html>
+ 

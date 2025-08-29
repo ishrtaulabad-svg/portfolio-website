@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.Parent1 {
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    border: 2px solid black;
+    height: 300px;
+    width: 1000px;
+}
+
+.container1 {
+    height: 300px;
+    width: 200px;
+    border: 2px solid black;
+}
+
+.container1 div {
+    height: 96px;
+    width: 90px;
+    border: 2px solid black;
+    background: rgb(110, 144, 223);
+}
+
+.container1 .static {
+    position: static;
+    text-align: center;
+    background: rgb(78, 240, 143);
+}
+
+.container2 {
+    height: 300px;
+    width: 200px;
+    border: 2px solid black;
+
+}
+
+.container2 div {
+    height: 96px;
+    width: 90px;
+    border: 2px solid black;
+    background: rgb(106, 162, 210);
+}
+
+.container2 .relative {
+    position: relative;
+    left: 40px;
+    top: 50px;
+    text-align: center;
+    background: rgb(78, 240, 143);
+}
+
+.container3 {
+    height: 300px;
+    width: 200px;
+    border: 2px solid black;
+
+}
+
+.container3 div {
+    height: 96px;
+    width: 90px;
+    border: 2px solid black;
+    background: rgb(110, 144, 223);
+}
+
+.container3 .absolute {
+    position: absolute;
+    left: 540px;
+    text-align: center;
+    background: rgb(78, 240, 143);
+}
+
+.container4 {
+    height: 300px;
+    width: 200px;
+    border: 2px solid black;
+
+}
+
+.container4 div {
+    height: 96px;
+    width: 90px;
+    border: 2px solid black;
+    background: rgb(110, 144, 223);
+}
+
+.container4 .fixed {
+    position: fixed;
+    left: 900px;
+    top: 0px;
+    text-align: center;
+    background: rgb(78, 240, 143);
+}
+
+.Parent2 {
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    border: 2px solid black;
+    height: 300px;
+    width: 1000px;
+
+}
+
+.container5 {
+    height: 300px;
+    width: 200px;
+    border: 2px solid black;
+    overflow: auto;
+}
+
+.container5 div {
+    height: 96px;
+    width: 90px;
+    border: 2px solid black;
+    background: rgb(110, 144, 223);
+}
+
+.container5 .stickyT {
+    position: sticky;
+    top: 0;
+    text-align: center;
+    background: rgb(78, 240, 143);
+}
+
+.container6 {
+    height: 300px;
+    width: 200px;
+    border: 2px solid black;
+    overflow: auto;
+}
+
+.container6 div {
+    height: 96px;
+    width: 90px;
+    border: 2px solid black;
+    background: rgb(110, 144, 223);
+}
+
+.container6 .stickyB {
+    position: sticky;
+    bottom: 0;
+    text-align: center;
+    background: rgb(78, 240, 143);
+}
+
+.container7 {
+    height: 300px;
+    width: 350px;
+    border: 2px solid black;
+    display: flex;
+    overflow-x: auto;
+}
+
+.container7 div {
+    flex: 0 0 auto;
+    height: 96px;
+    width: 90px;
+    border: 2px solid black;
+    background: rgb(110, 144, 223);
+    
+}
+
+.container7 .stickyL {
+    position: sticky;
+    left: 0;
+    background: rgb(78, 240, 143);
+    z-index: 1;
+}
+
+.container8 {
+    height: 300px;
+    width: 350px;
+    border: 2px solid black;
+    display: flex;
+    overflow-x: auto;
+}
+
+.container8 div {
+    flex: 0 0 auto;
+    height: 96px;
+    width: 90px;
+    border: 2px solid black;
+    background: rgb(110, 144, 223);
+}
+
+.container8 .stickyR {
+    position: sticky;
+    right: 0;
+    background: rgb(78, 240, 143);
+    
+}

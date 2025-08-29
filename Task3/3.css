@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    height: 1600px;
+    background-color: palevioletred;
+}
+
+
+.navbar {
+    background-color: #ffee00;
+    position: sticky;
+    top: 0;
+    height: 60px;
+
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: left;
+}
+
+.navbar li {
+    margin: 0 15px;
+
+}
+
+.navbar a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+}
+
+.parent {
+    width: 1300px;
+    height: 600px;
+    border: 12px solid rgb(0, 2, 68);
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 0px;
+}
+
+.child1 {
+    width: 1200px;
+    height: 250px;
+    border: 5px solid rgb(0, 0, 0);
+    margin-left: 40px;
+    margin-top: 40px;
+    background-color: #f9f903;
+}
+
+.child1 p {
+    margin: 20px;
+}
+
+.child1 .box {
+    height: 20px;
+    width: 80px;
+    border: 4px solid black;
+    position: static;
+    margin-left: 1000px;
+    cursor: pointer;
+}
+
+.child2 {
+    width: 1200px;
+    height: 40px;
+    border: 5px solid rgb(0, 0, 0);
+    margin-top: 10px;
+    margin-left: 40px;
+    position: sticky;
+    top: 55px;
+    background-color: #03a81c;
+}
+
+.child2 p {
+    display: flex;
+    justify-content: flex-start;
+    margin: 5px;
+}
+
+.child3 {
+    width: 1200px;
+    height: 80px;
+    border: 5px solid rgb(0, 0, 0);
+    margin-top: 10px;
+    margin-left: 40px;
+    background-color: #f0f409;
+}
+
+.child3 p {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 5px;
+}
