@@ -33,8 +33,9 @@ input{
     cursor: pointer;
     color: rgb(7, 7, 7);    
 }
+
 input::placeholder{
-    color: #ffffff;
+    color: #000000;
      background: white;
     padding: 10px;
 }

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>One Product Cart</title>
+  <style>
+    .product { margin: 10px; padding: 10px; border: 1px solid #ccc; }
+    #cart { 
+      margin-top: 20px; 
+      padding: 10px; 
+      border: 2px solid green; 
+      display: none; /* hidden by default */
+    }
+  </style>
+</head>
+<body>
+  <h1>Products</h1>
+
+  <!-- Product -->
+  <div class="product">
+    <p>Smartphone - $300</p>
+    <button id="add-to-cart" data-name="Smartphone" data-price="300">Add to Cart</button>
+  </div>
+
+  <!-- Cart Toggle Button -->
+  <button id="cart-button">Show Cart</button>
+
+  <!-- Cart -->
+  <h2>Your Cart</h2>
+  <div id="cart">Cart is empty</div>
+
+  <script>
+    let cart = null; // only one product allowed
+
+    const button = document.getElementById("add-to-cart");
+    const cartDiv = document.getElementById("cart");
+    const cartButton = document.getElementById("cart-button");
+
+    // Add product to cart
+    button.addEventListener("click", () => {
+      const name = button.getAttribute("data-name");
+      const price = button.getAttribute("data-price");
+
+      cart = { name: name, price: price };
+      displayCart();
+    });
+
+    // Toggle cart visibility
+    cartButton.addEventListener("click", () => {
+      if (cartDiv.style.display === "none") {
+        cartDiv.style.display = "block";
+        cartButton.textContent = "Hide Cart";
+      } else {
+        cartDiv.style.display = "none";
+        cartButton.textContent = "Show Cart";
+      }
+    });
+
+    function displayCart() {
+      if (cart) {
+        cartDiv.innerHTML = `<p>${cart.name} - $${cart.price}</p>`;
+      } else {
+        cartDiv.innerHTML = "Cart is empty";
+      }
+    }
+  </script>
+</body>
+</html>
+

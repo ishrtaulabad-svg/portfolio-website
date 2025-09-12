@@ -1,0 +1,91 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    text-align: center;
+    transition: 0.3s;
+}
+
+/* Icon Buttons */
+#Icon {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    gap: 40px;
+}
+
+#Icon button {
+    padding: 10px 20px;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: aliceblue;
+    color: black;
+    transition: 0.3s;
+}
+
+#Icon button:hover {
+    background-color: #ccc;
+}
+
+/* Plus & Minus Buttons */
+#button {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 15%;
+}
+
+.btn1, .btn2 {
+    height: 50px;
+    width: 50px;
+    background-color: aliceblue;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn1:hover, .btn2:hover {
+    background-color: #ddd;
+}
+
+/* Counter Display Box */
+#counterDisplay {
+    margin-top: 100px;
+    font-size: 2rem;
+    color: white;
+    background-color: #222;
+    width: 100px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Dark and Light Modes */
+.dark {
+    background-color: black;
+    color: white;
+}
+
+.light {
+    background-color: white;
+    color: black;
+}

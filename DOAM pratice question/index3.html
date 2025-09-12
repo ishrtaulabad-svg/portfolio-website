@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Search</title>
+    <link rel="stylesheet" href="../Ecomerice website/style.css">
+</head>
+
+<body>
+   <input type="text" id="search-box" placeholder="Search...">
+
+   <section id="products">
+
+      <div class="product">
+        <div class="image-container">
+          <img src="../Ecomerice website/Images/1.jpg" alt="Laptop">
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="details">
+          <h2>Rolex</h2>
+          <p>$2999</p>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="image-container">
+          <img src="../Ecomerice website/Images/2.jpg" alt="Phone">
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="details">
+          <h2>Casio</h2>
+          <p>$61192</p>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="image-container">
+          <img src="../Ecomerice website/Images/3.jpg" alt="Headphones">
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="details">
+          <h2>Seiko</h2>
+          <p>$1099</p>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="image-container">
+          <img src="../Ecomerice website/Images/4.jpg" alt="Keyboard">
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="details">
+          <h2>Omega</h2>
+          <p>$1200</p>
+        </div>
+      </div>
+
+   </section>
+
+   <script>
+      const search = document.getElementById("search-box");
+      const products = document.querySelectorAll(".product");
+
+      search.addEventListener('input', () => {
+          const query = search.value.toLowerCase();
+
+          products.forEach(product => {
+              const name = product.querySelector("h2").textContent.toLowerCase();
+
+              if (name.includes(query)) {
+                  product.style.display = 'block';
+              } else {
+                  product.style.display = 'none';
+              }
+          });
+      });
+   </script>
+</body>
+</html>
